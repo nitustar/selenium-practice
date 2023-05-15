@@ -1,0 +1,11 @@
+Steps :
+
+1. Open Web Browser (Chrome/firefox/IE).
+2. Open URL https://admin-demo.nopcommerce.com/login
+3. Provide Email (admin@yourstore.com).
+4. Provide Password (admin).
+5. Check on login.
+6. Capture title of the dashboard page. (Actual Title)
+7. Verify title of the page: "Dashboard / nopCommerce administration" (Expected)
+8. Close Browser.
+
