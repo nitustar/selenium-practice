@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -21,5 +23,21 @@ driver.maximize_window()
 # driver.find_element(By.XPATH, "//*[@id='search_query_top']").send_keys("T-shirt")
 # driver.find_element(By.XPATH, "//*[@id='searchbox']/button").click()
 
+# OR & AND
+
+# driver.find_element(By.XPATH, "//input[@id='search_query_top' or @name='search_query']").send_keys("T-shirt")
+# driver.find_element(By.XPATH, "//button[@name='submit_search' and @class='btn btn-default button-search']").click()
+
+# contain() & starts-with()
+
+driver.find_element(By.XPATH, "//input[contains(@id,'search')]").send_keys("T-shirt")
+driver.find_element(By.XPATH, "//button[starts-with(@name,'submit')]").click()
+
+# text()
+
+driver.find_element(By.XPATH, "//a[text()='Women']").click()
 
 print("success")
+
+# time.sleep(2)
+# driver.close()
