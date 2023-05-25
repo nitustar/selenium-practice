@@ -10,7 +10,7 @@ options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 
 driver = webdriver.Chrome(service=serv_obj, options=options)
-driver.get("https://demo.nopcommerce.com/")
+driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F")
 
 driver.maximize_window()
 
@@ -30,16 +30,22 @@ print("Default radio button status.")
 print("Male Status: ", rd_male.is_selected())        # False
 print("Female Status: ", rd_female.is_selected())      # False
 
+time.sleep(2)
+
 rd_male.click()
 
 print("After selecting a radio button.")
 print("Male Status: ", rd_male.is_selected())        # True
 print("Female Status: ", rd_female.is_selected())      # False
 
+time.sleep(2)
+
 rd_female.click()
 
 print("After selecting a radio button.")
 print("Male Status: ", rd_male.is_selected())        # False
 print("Female Status: ", rd_female.is_selected())      # True
+
+time.sleep(2)
 
 driver.quit()

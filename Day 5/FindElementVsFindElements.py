@@ -13,7 +13,7 @@ driver = webdriver.Chrome(service=serv_obj, options=options)
 driver.get("https://demo.nopcommerce.com/")
 driver.maximize_window()
 
-# Find_Element - Return Single WebElement
+# 1. Find_Element - Return Single WebElement
 # Locator matching with single webElement
 
 # elem = driver.find_element(By.XPATH, "//input[@id='small-searchterms']")
@@ -28,7 +28,7 @@ driver.maximize_window()
 # login_element.click()
 
 
-# Find_Elements - Return Multiple WebElement
+# 2. Find_Elements - Return Multiple WebElement
 
 # Locator matching with single webElement
 # elem = driver.find_elements(By.XPATH, "//input[@id='small-searchterms']")
